@@ -40,6 +40,8 @@ class MyApp extends StatelessWidget{
               print("You longed Press me");
             },
             isThreeLine: true,
+            hoverColor: Colors.amberAccent,
+            focusColor: const Color.fromARGB(255, 43, 170, 186),
             leading: CircleAvatar(backgroundImage: AssetImage('lib/images/cake1.jpg'),),
             title: Text("Chocolate Cake"),
             subtitle: Text("A rich, moist chocolate cake made with premium cocoa."),
