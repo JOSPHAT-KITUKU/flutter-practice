@@ -18,7 +18,17 @@ class HomePage extends StatelessWidget {
             onPressed: () {},
             icon: Icon(Icons.notifications, color: Colors.red),
           ),
-          IconButton(onPressed: () {}, icon: Icon(Icons.search_outlined)),
+          PopupMenuButton(itemBuilder: (context)=>[
+            PopupMenuItem(
+              child: TextButton(onPressed: ()=>{print("Profile Clicked")}, child: Text("Profile")),
+              ),
+              PopupMenuItem(
+              child: TextButton(onPressed: ()=>{print("Orders Page in Progress")}, child: Text("Orders")),
+              ),
+            PopupMenuItem(
+              child: TextButton(onPressed: ()=>{print("You are signout")}, child: Text("Signout")),
+              ),
+          ])
         ],
       ),
       body: ListView(
@@ -43,6 +53,18 @@ class HomePage extends StatelessWidget {
           SizedBox(height: 30),
 
           Cakeitemlist(),
+
+          SizedBox(height: 30,),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.copyright),
+              Text("SDLC 2025"),
+            ],
+          ),
+
+          SizedBox(height: 15,)
         ],
       ),
     );
